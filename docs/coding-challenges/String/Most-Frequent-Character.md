@@ -183,3 +183,131 @@ console.log(result);
 
 **注：如果使用大顶堆，则需要对所有的数据进行堆排序后才能知道哪些是最大的。**
 
+### 实现最小堆
+
+```js lineNumbers
+class Heap {
+  constructor(compareFn) {
+    this.heap = [];
+    // 可传入自定义比较函数
+    this.compFn = compareFn || (a, b) => a - b;
+  }
+  
+  size(){
+    return this.heap.length;
+  }
+  
+  isEmpty(){
+    return this.size() === 0;
+  }
+  
+  swap(i, j) {
+    [this.heap[j], this.heap[i]] = [this.heap[i], this.heap[j]];
+  }
+  
+  peek(){
+    return this.heap[0];
+  }
+  
+  push(val){
+    this.heap.push(val);
+    // 改变了堆的特性，需要向上浮动
+    this.heapifyUp(this.heap.length - 1);
+  }
+  
+  // 取出第一个
+  pop(){
+    if(this.isEmpty()) {
+      return null;
+    }
+    if(this.size() === 1){
+      return this.heap.pop();
+    }
+    
+    const top = this.heap[0];
+    this.heap[0] = this.heap.pop();
+    // 维护堆的特性
+    this.heapifyDown(0);
+    return top;
+  }
+  
+  // 从尾部向上浮动
+  // 如果当前元素小于父元素（具体取决于 compFn）
+  // 就交换元素并更新 index 进入下一轮比较
+  heapifyUp(index) {
+    while(index > 0) {
+      let parentIndex = Math.floor((index - 1) / 2);
+      if(this.compFn(this.heap[index], this.heap[parentIndex]) < 0){
+        this.swap(index, parentIndex);
+        index = parentIndex;
+      } else {
+        break;
+      }
+    }
+  }
+  
+  // 从顶部往下沉
+  heapifyDown(index){
+    const lastIndex = this.heap.length - 1;
+    while(index < lastIndex) {
+      let left = index * 2 + 1;
+      let right = left + 1;
+      
+      // 假设左子节点是更优的选择
+      let bestIndex = left;
+      
+      //用它和右子节点比较
+      if(right <= lastIndex && this.compFn(this.heap[right], this.heap[left]) < 0) {
+        bestIndex = right;
+      }
+      
+      // 拿出最强节点和父节点比较
+      if(this.compFn(this.heap[bestIndex], this.heap[index]) < 0) {
+        this.swap(index, bestIndex);
+        index = bestIndex;
+      } else {
+        break;
+      }
+    }
+  }
+}
+```
+
+### 小顶堆解法
+
+```js lineNumbers
+function topKFrequent(str, k) {
+  if(!str || k <= 0) {
+    return [];
+  }
+  
+  const charMap = [...str].reduce((acc, char) => {
+    acc.set(char, (acc.get(char) || 0) + 1);
+    return acc;
+  }, new Map())
+  
+  // 构建小顶堆
+  const minHeap = new Heap((a, b) => a.count - b.count);
+  
+  // 遍历哈希表
+  for(const [char, count] of charMap) {
+    minHeap.push({ char, count });
+    // 只维护 n 个元素
+    if(minHeap.size() > n){
+      minHeap.pop();
+    }
+  }
+  
+  // 输出结果
+  const result = [];
+  while(minHeap.size() > 0) {
+    result.push(minHeap.pop());
+  }
+  
+  // 由大到小返回
+  return result.reverse()
+}
+```
+
+
+
