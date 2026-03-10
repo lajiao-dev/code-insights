@@ -2,8 +2,8 @@
 pageType: home
 
 hero:
-  name: "The limits of my language mean the limits of my world."
-  text: ""
+  name: 'The limits of my language mean the limits of my world.'
+  text: ''
   tagline: -Ludwig Wittgenstein
   actions:
     - theme: brand
