@@ -1,5 +1,5 @@
 ---
 overview: true
 title: Code Challenges
-overviewHeaders: [1, 2]
+overviewHeaders: [2]
 ---
