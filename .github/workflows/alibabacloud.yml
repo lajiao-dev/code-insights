@@ -1,0 +1,55 @@
+name: Deploy Rspress to Aliyun ECS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: pnpm run build
+
+      # 使用 SSH 部署到阿里云 ECS
+      - name: Deploy to ECS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "doc_build/*"  # Rspress 默认构建输出目录
+          target: "/opt/www/blog-site" # 你在 ECS 上存放网站的目录
+          strip_components: 1 # 传输时去掉 doc_build 这一层目录，直接放文件
+
+      # (可选) 如果需要执行额外命令，比如重启 Nginx
+      - name: Post-deployment command
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            sudo chown -R www-data:www-data /opt/www/blog-site
+            # 如果需要重启 nginx，解除下面注释
+            # sudo systemctl reload nginx
