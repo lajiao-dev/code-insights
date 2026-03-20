@@ -1,10 +1,11 @@
 import * as path from 'node:path';
 import { defineConfig } from '@rspress/core';
 import { pluginLlms } from '@rspress/plugin-llms';
+import { AutoMetaPlugin } from 'rspress-plugin-auto-nav';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [pluginLlms()],
+  plugins: [pluginLlms(), AutoMetaPlugin()],
   base: '/code-insights/',
   title: '辣椒的 Coding 之旅',
   icon: '/logo.svg',
@@ -21,8 +22,11 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/web-infra-dev/rspress',
+        content: 'https://github.com/lajiao-dev/code-insights.git',
       },
     ],
-  },
+    footer: {
+      message: '京ICP备2025156764号-1'
+    }
+  }
 });

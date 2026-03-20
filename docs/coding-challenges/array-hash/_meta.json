@@ -1,11 +1,52 @@
 [
-  "two-sum",
-  "array-to-tree",
-  "merge-two-arr",
-  "remove-duplicates",
-  "remove-duplicates-v2",
-  "remove-element",
-  "is-valid-brackets",
-  "most-frequent-character",
-  "format-string"
+  {
+    "type": "file",
+    "name": "array-to-tree",
+    "label": "array-to-tree"
+  },
+  {
+    "type": "file",
+    "name": "format-string",
+    "label": "format-string"
+  },
+  {
+    "type": "file",
+    "name": "is-valid-brackets",
+    "label": "is-valid-brackets"
+  },
+  {
+    "type": "file",
+    "name": "majority-element",
+    "label": "majority-element"
+  },
+  {
+    "type": "file",
+    "name": "merge-two-arr",
+    "label": "merge-two-arr"
+  },
+  {
+    "type": "file",
+    "name": "most-frequent-character",
+    "label": "most-frequent-character"
+  },
+  {
+    "type": "file",
+    "name": "remove-duplicates-v2",
+    "label": "remove-duplicates-v2"
+  },
+  {
+    "type": "file",
+    "name": "remove-duplicates",
+    "label": "remove-duplicates"
+  },
+  {
+    "type": "file",
+    "name": "remove-element",
+    "label": "remove-element"
+  },
+  {
+    "type": "file",
+    "name": "two-sum",
+    "label": "two-sum"
+  }
 ]

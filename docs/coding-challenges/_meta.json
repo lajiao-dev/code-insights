@@ -2,11 +2,13 @@
   {
     "type": "file",
     "name": "index",
-    "label": "Code Challenges"
+    "label": "首页"
   },
   {
     "type": "dir",
     "name": "array-hash",
-    "label": "数组与哈希"
+    "label": "数组与哈希",
+    "collapsible": true,
+    "collapsed": false
   }
 ]
