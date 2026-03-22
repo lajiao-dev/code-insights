@@ -2,51 +2,56 @@
   {
     "type": "file",
     "name": "array-to-tree",
-    "label": "array-to-tree"
+    "label": "一维数组转换为树状数组"
   },
   {
     "type": "file",
     "name": "format-string",
-    "label": "format-string"
+    "label": "千分符"
   },
   {
     "type": "file",
     "name": "is-valid-brackets",
-    "label": "is-valid-brackets"
+    "label": "有效的括号"
   },
   {
     "type": "file",
     "name": "majority-element",
-    "label": "majority-element"
+    "label": "多数元素 (Majority Element)"
   },
   {
     "type": "file",
     "name": "merge-two-arr",
-    "label": "merge-two-arr"
+    "label": "合并两个有序数组"
   },
   {
     "type": "file",
     "name": "most-frequent-character",
-    "label": "most-frequent-character"
+    "label": "出现频率最高的字符"
   },
   {
     "type": "file",
     "name": "remove-duplicates-v2",
-    "label": "remove-duplicates-v2"
+    "label": "删除排序数组中的重复项 II"
   },
   {
     "type": "file",
     "name": "remove-duplicates",
-    "label": "remove-duplicates"
+    "label": "删除排序数组中的重复项"
   },
   {
     "type": "file",
     "name": "remove-element",
-    "label": "remove-element"
+    "label": "移除元素"
+  },
+  {
+    "type": "file",
+    "name": "rotate-nums",
+    "label": "旋转数组"
   },
   {
     "type": "file",
     "name": "two-sum",
-    "label": "two-sum"
+    "label": "两数之和"
   }
 ]
