@@ -16,8 +16,18 @@
   },
   {
     "type": "file",
+    "name": "h-index",
+    "label": "H 指数"
+  },
+  {
+    "type": "file",
     "name": "is-valid-brackets",
     "label": "有效的括号"
+  },
+  {
+    "type": "file",
+    "name": "jump",
+    "label": "跳跃游戏 II"
   },
   {
     "type": "file",
