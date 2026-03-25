@@ -56,6 +56,11 @@
   },
   {
     "type": "file",
+    "name": "randomized-set",
+    "label": "O(1) 时间插入、删除和获取随机元素"
+  },
+  {
+    "type": "file",
     "name": "remove-duplicates-v2",
     "label": "删除排序数组中的重复项 II"
   },
