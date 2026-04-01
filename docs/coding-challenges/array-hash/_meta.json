@@ -56,6 +56,11 @@
   },
   {
     "type": "file",
+    "name": "product-except-self",
+    "label": "除自身以外数组的乘积"
+  },
+  {
+    "type": "file",
     "name": "randomized-set-v2",
     "label": "O(1) 时间插入、删除和获取随机元素 - 支持重复元素"
   },
