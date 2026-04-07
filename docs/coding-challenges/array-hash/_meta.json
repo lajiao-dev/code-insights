@@ -6,6 +6,11 @@
   },
   {
     "type": "file",
+    "name": "can-complete-circuit",
+    "label": "加油站"
+  },
+  {
+    "type": "file",
     "name": "can-jump",
     "label": "跳跃游戏"
   },
