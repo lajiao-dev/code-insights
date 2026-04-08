@@ -91,6 +91,11 @@
   },
   {
     "type": "file",
+    "name": "roman-to-num",
+    "label": "罗马数字转整数"
+  },
+  {
+    "type": "file",
     "name": "rotate-nums",
     "label": "旋转数组"
   },
