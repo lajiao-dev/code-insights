@@ -103,5 +103,10 @@
     "type": "file",
     "name": "two-sum",
     "label": "两数之和"
+  },
+  {
+    "type": "file",
+    "name": "length-of-last-word",
+    "label": "最后一个单词的长度"
   }
 ]
