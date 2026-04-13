@@ -3,5 +3,10 @@
     "text": "Coding Challenges",
     "link": "/coding-challenges/",
     "activeMatch": "/coding-challenges/"
+  },
+  {
+    "text": "软件系统设计笔记",
+    "link": "/system-design-notes/ddd-learning-plan",
+    "activeMatch": "/system-design-notes/"
   }
 ]
