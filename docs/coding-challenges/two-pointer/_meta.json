@@ -3,5 +3,10 @@
     "type": "file",
     "name": "is-palindrome",
     "label": "验证回文串"
+  },
+  {
+    "type": "file",
+    "name": "is-subsequence",
+    "label": "判断子序列"
   }
 ]
