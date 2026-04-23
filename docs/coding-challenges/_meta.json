@@ -10,5 +10,12 @@
     "label": "数组与哈希",
     "collapsible": true,
     "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "two-pointer",
+    "label": "双指针",
+    "collapsible": true,
+    "collapsed": false
   }
 ]
