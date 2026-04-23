@@ -116,12 +116,12 @@
   },
   {
     "type": "file",
-    "name": "two-sum",
-    "label": "两数之和"
+    "name": "str-z-convert",
+    "label": "Z 字形变换"
   },
   {
     "type": "file",
-    "name": "str-z-convert",
-    "label": "Z 字形变换"
+    "name": "two-sum",
+    "label": "两数之和"
   }
 ]
