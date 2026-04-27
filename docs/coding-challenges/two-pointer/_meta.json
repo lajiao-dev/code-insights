@@ -8,5 +8,15 @@
     "type": "file",
     "name": "is-subsequence",
     "label": "判断子序列"
+  },
+  {
+    "type": "file",
+    "name": "to-sum-2",
+    "label": "两数之和 II"
+  },
+  {
+    "type": "file",
+    "name": "max-area",
+    "label": "盛最多水的容器"
   }
 ]
