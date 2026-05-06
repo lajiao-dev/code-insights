@@ -11,12 +11,17 @@
   },
   {
     "type": "file",
-    "name": "to-sum-2",
-    "label": "两数之和 II"
+    "name": "max-area",
+    "label": "盛最多水的容器"
   },
   {
     "type": "file",
-    "name": "max-area",
-    "label": "盛最多水的容器"
+    "name": "three-nums-sum",
+    "label": "三数之和"
+  },
+  {
+    "type": "file",
+    "name": "to-sum-2",
+    "label": "两数之和 II"
   }
 ]
