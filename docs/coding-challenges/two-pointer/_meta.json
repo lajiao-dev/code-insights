@@ -16,6 +16,11 @@
   },
   {
     "type": "file",
+    "name": "min-sub-array-len",
+    "label": "长度最小的子数组"
+  },
+  {
+    "type": "file",
     "name": "three-nums-sum",
     "label": "三数之和"
   },
