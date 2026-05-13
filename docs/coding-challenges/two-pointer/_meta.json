@@ -11,6 +11,11 @@
   },
   {
     "type": "file",
+    "name": "length-of-longest-sub-string",
+    "label": "无重复字符的最长子串"
+  },
+  {
+    "type": "file",
     "name": "max-area",
     "label": "盛最多水的容器"
   },
