@@ -123,5 +123,10 @@
     "type": "file",
     "name": "two-sum",
     "label": "两数之和"
+  },
+  {
+    "type": "file",
+    "name": "spiral-order",
+    "label": "螺旋矩阵"
   }
 ]
